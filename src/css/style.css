@@ -283,3 +283,57 @@ header .cart{
 .headMenu .search input{
   margin-top: 20px;
 }
+#checkout{
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.order-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.order-summary-item {
+  display: flex;
+  justify-content: space-between;
+}
+#checkout-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#checkout--summary {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#checkout--cartSummary {
+  flex: 1;
+}
+
+#checkout--totalSummary {
+  flex: 1;
+}
+
+#checkout--paymentDetails {
+  margin-top: 20px;
+}
+
+.order-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-summary-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Media query for stacking on mobile */
+@media (max-width: 768px) {
+  #checkout--summary {
+    flex-direction: column;
+  }
+}

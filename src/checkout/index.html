@@ -14,6 +14,85 @@
       <section class="products">
         <h2>Review & Place your Order</h2>
       </section>
+      <section id="checkout">
+        
+        <form id="checkout-form" action="" method="post">
+          <div id="checkout--summary">
+            <div id="checkout--cartSummary">
+              <table>
+
+                    <tr>
+                        <td><img src="product_image_url_here" alt="Product Image"></td>
+                        <td>20CXG</td> <!-- Example ID -->
+                        <input type="hidden" aria-hidden="true" name="items[0].id" value="20CXG" />
+                        <td>The North Face Pivoter 27 L Backpack</td> 
+                        <input type="hidden" aria-hidden="true" name="items[0].name" value="The North Face Pivoter 27 L Backpack" />
+                        <td>$39.99</td>
+                        <input type="hidden" aria-hidden="true" name="items[0].price" value="39.99" />
+                        <td>Qty: 1</td>
+                        <input type="hidden" aria-hidden="true" name="items[0].quantity" value="1" />
+                    </tr>
+                  
+              </table>
+            </div>
+            <div id="checkout--totalSummary">
+
+              <div class="order-summary">
+                <div class="order-summary-item">
+                    <span>Subtotal</span>
+                    <span>$100.00</span> <!-- Example subtotal amount -->
+                </div>
+                <div class="order-summary-item">
+                    <span>Shipping Estimate</span>
+                    <span>$10.00</span> <!-- Example shipping estimate -->
+                </div>
+                <div class="order-summary-item">
+                    <span>Tax</span>
+                    <span>$5.00</span> <!-- Example tax amount -->
+                </div>
+                <div class="order-summary-item">
+                    <span>Order Total</span>
+                    <span>$115.00</span> <!-- Example order total -->
+                </div>
+                  <input type="hidden" aria-hidden="true" name="orderTotal"/>
+                  <input type="hidden" aria-hidden="true" name="shipping"/>
+                  <input type="hidden" aria-hidden="true" name="tax"/>
+              </div>
+            </div>
+          </div>
+          <div id="checkout--paymentDetails">
+            <input type="hidden" aria-hidden="true" name="orderDate"/>
+            <fieldset>
+              <label>Customer Name:
+                  <input type="text" required aria-required="true" name="fname" placeholder="First Name"/>
+                  <input type="text" required aria-required="true" name="lname" placeholder="Last Name"/>
+              </label>
+            </fieldset>
+
+            <fieldset>
+              <label>Address:
+                  <input type="text" required aria-required="true" name="street" placeholder="Street Address"/>
+                  <input type="text" required aria-required="true" name="address2" placeholder="APT/Unit #"/>
+                  <input type="text" required aria-required="true" name="city" placeholder="City"/>
+                  <input type="text" required aria-required="true" name="state" placeholder="State"/>
+                  <input type="text" required aria-required="true" name="zip" placeholder="Postal Code"/>
+              </label>
+            </fieldset>
+            <fieldset>
+              <label>Payment Info:
+                  <input type="text" required aria-required="true" name="cardNumber" placeholder="Credit Card #:" pattern=""/>
+                  <input type="text" required aria-required="true" name="expiration" placeholder="Expiration" pattern=""/>
+                  <input type="text" required aria-required="true" name="code" placeholder="City"/>
+              </label>
+            </fieldset>
+            <fieldset>
+              
+                  <input type="submit" value="Complete Purchase"/>
+              </label>
+            </fieldset>
+          </div>
+        </form>
+      </section>
     </main>
     <footer id="footer"></footer>
   </body>

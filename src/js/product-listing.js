@@ -1,4 +1,4 @@
-import ProductData from './ProductData.mjs';
+import ExternalServices from './ExternalServices.mjs';
 import ProductList from './ProductList.mjs';
 import {getParam} from './utils.mjs'
 const category = getParam('category');
@@ -6,7 +6,7 @@ const category = getParam('category');
 const search = getParam('search');
 const selectElement = document.querySelector('.sProd');
 let sort = selectElement.value;
-let dataSource = new ProductData();
+let dataSource = new ExternalServices();
 let element = document.querySelector('.product-list');
 let productList;
 if(search){
@@ -20,7 +20,7 @@ productList.init();
 document.querySelector('.sProd').addEventListener('change', (event) => {
     // console.log(event.target.value);
     sort = event.target.value;
-    dataSource = new ProductData();
+    dataSource = new ExternalServices();
     element = document.querySelector('.product-list');
     productList = new ProductList(category, dataSource, element, sort);
     document.querySelector('.product-list').innerHTML = '';
