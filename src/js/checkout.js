@@ -12,8 +12,11 @@ document
 
 document.querySelector("#checkSubmit").addEventListener("click", (e) => {
   e.preventDefault();
-
-  myCheckout.checkout();
+  const siteForm = document.forms['checkout'];
+  const status = siteForm.checkValidity();
+  siteForm.reportValidity();
+  if (status)
+    myCheckout.checkout();
 });
 
 document.forms['checkout']
