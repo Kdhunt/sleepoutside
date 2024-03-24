@@ -1,16 +1,16 @@
-import { loadHeaderFooter, alertMessage } from "./utils.mjs";
-import CheckoutProcess from "./CheckoutProcess.mjs";
+import { loadHeaderFooter} from './utils.mjs';
+import CheckoutProcess from './CheckoutProcess.mjs';
 
 loadHeaderFooter();
 
-const myCheckout = new CheckoutProcess("so-cart", ".checkout");
+const myCheckout = new CheckoutProcess('so-cart', '.checkout');
 myCheckout.init();
 
 document
-  .querySelector("#zipn")
-  .addEventListener("blur", myCheckout.calculateOrderTotal.bind(myCheckout));
+  .querySelector('#zipn')
+  .addEventListener('blur', myCheckout.calculateOrderTotal.bind(myCheckout));
 
-document.querySelector("#checkSubmit").addEventListener("click", async (e) => {
+document.querySelector('#checkSubmit').addEventListener('click', async (e) => {
   e.preventDefault();
   myCheckout.checkout();
 });
