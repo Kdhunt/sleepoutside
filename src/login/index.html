@@ -12,13 +12,17 @@
     <header id="header" class="divider">
     </header>
     <main class="divider">
-      <section class="products">
-        <h2>My Cart</h2>
-        <ul class="product-list">    
-        </ul>
-      </section>
-      <div class="total hide"></div>
-      <button id="checkout">Checkout Now</button>
+        <section class="login">
+        <!-- Login Form -->
+            <div id="login-form" class="hide">
+                <h2>Login</h2>
+                <form id="login-form" method="POST">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <input type="submit" value="Login">
+                </form>
+            </div>
+        </section>
     </main>
     <footer id="footer"></footer>
   </body>
